@@ -1,10 +1,12 @@
 
+import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * Sets are unordered collections of elements. Sets do not allow duplicates.
  *
- * Sets are very efficient for storing items that should be unique.
+ * Sets are very efficient fo storing items that should be unique.
  *
  * You can read about HashSet, a common and very efficient implementation of Set, here:
  * https://www.w3schools.com/java/java_hashset.asp
@@ -20,7 +22,8 @@ public class Lab {
      * @return a new Set<Integer> object.
      */
     public Set<Integer> createSet(){
-        return null;
+       Set<Integer> set = new TreeSet<>();
+        return set;
     }
 
     /**
@@ -29,7 +32,8 @@ public class Lab {
      * @return the size of set. (number of values)
      */
     public int getSize(Set<Integer> set){
-        return 0;
+         //Set<Integer> set = new HashSet<>();
+        return set.size();
     }
 
     /**
@@ -39,7 +43,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void addUniqueItem(Set<Integer> set, int item){
-
+     
+     set.add(item);
     }
 
     /**
@@ -49,6 +54,8 @@ public class Lab {
      * @return nothing, pass by reference will cause changes to the list object to be reflected across the program.
      */
     public void removeItem(Set<Integer> set, int item){
+        set.remove(item);
+        
 
     }
 }
